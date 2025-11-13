@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - ZoomZoom Clínica Veterinária</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                        <i class="fas fa-paw"></i>
+                        <h1>ZoomZoom</h1>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="../index.html#agendamento">Agendamento</a></li>
+                        <li><a href="contato.html" class="active">Contato</a></li>
+                    </ul>
+                    <div class="mobile-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Página de Contato -->
+    <section class="contact-page" style="padding: 120px 0 80px; margin-top: 70px;">
+        <div class="container">
+            <h1 class="section-title">Entre em Contato</h1>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem;">
+                Estamos sempre prontos para ajudar seu pet. Entre em contato conosco através dos canais abaixo ou visite nossa clínica.
+            </p>
+
+            <div class="contact-content">
+                <!-- Informações de Contato -->
+                <div class="contact-info-section">
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Endereço</h3>
+                                <p>Rua dos Animais, 123 - Centro</p>
+                                <p>São Paulo - SP, 01234-567</p>
+                                <a href="#" class="map-link">Ver no mapa →</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Telefones</h3>
+                                <p>WhatsApp: (11) 99999-9999</p>
+                                <p>Fixo: (11) 3333-3333</p>
+                                <p>Emergências: (11) 98888-8888</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Email</h3>
+                                <p>contato@zoomzoom.com.br</p>
+                                <p>emergencia@zoomzoom.com.br</p>
+                                <p>agendamento@zoomzoom.com.br</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Horário de Funcionamento</h3>
+                                <p><strong>Segunda a Sexta:</strong> 8h às 18h</p>
+                                <p><strong>Sábado:</strong> 8h às 12h</p>
+                                <p><strong>Domingo:</strong> Plantão emergencial</p>
+                                <p><strong>Plantão 24h:</strong> Emergências</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="map-section">
+                        <h3>Nossa Localização</h3>
+                        <div class="map-placeholder">
+                            <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white;">
+                                <div style="text-align: center;">
+                                    <i class="fas fa-map" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                                    <p>Mapa da nossa localização</p>
+                                    <p style="font-size: 0.9rem; opacity: 0.8;">Rua dos Animais, 123 - Centro - SP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário de Contato -->
+                <div class="contact-form-section">
+                    <div class="form-container">
+                        <h2>Envie sua Mensagem</h2>
+                        <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+                        
+                        <form class="contact-form" id="contactPageForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nome">Nome Completo *</label>
+                                    <input type="text" id="nome" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefone">Telefone *</label>
+                                    <input type="tel" id="telefone" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="assunto">Assunto *</label>
+                                <select id="assunto" class="form-control" required>
+                                    <option value="">Selecione o assunto...</option>
+                                    <option value="agendamento">Agendamento de Consulta</option>
+                                    <option value="duvida">Dúvida sobre Serviços</option>
+                                    <option value="orcamento">Orçamento</option>
+                                    <option value="emergencia">Emergência</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="pet">Nome do Pet</label>
+                                <input type="text" id="pet" class="form-control" placeholder="Opcional">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem *</label>
+                                <textarea id="mensagem" class="form-control" rows="6" placeholder="Descreva sua dúvida, solicitação ou emergência..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-block">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="faq-section">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Como agendar uma consulta?</h3>
+                        <p>Você pode agendar através do nosso site, WhatsApp ou telefone fixo. Também aceitamos walk-ins, mas recomendamos agendar com antecedência.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Vocês atendem emergências 24h?</h3>
+                        <p>Sim! Temos plantão 24h para emergências. Em casos de urgência, ligue para (11) 98888-8888.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Quais formas de pagamento aceitam?</h3>
+                        <p>Aceitamos cartão de crédito, débito, PIX, transferência bancária e dinheiro.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Preciso de encaminhamento para especialista?</h3>
+                        <p>Não é necessário encaminhamento. Você pode agendar diretamente com nossos especialistas.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Oferecem serviço de internação?</h3>
+                        <p>Sim, temos área de internação completa com monitoramento 24h para casos que necessitam de observação.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Fazem atendimento domiciliar?</h3>
+                        <p>Sim, oferecemos atendimento domiciliar para casos específicos. Entre em contato para verificar disponibilidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ZoomZoom</h3>
+                    <p>Cuidando do seu pet com amor e dedicação há mais de 15 anos. Sua clínica veterinária de confiança.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="../index.html#agendamento">Agendamento</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda a Sexta: 8h às 18h</p>
+                    <p>Sábado: 8h às 12h</p>
+                    <p>Plantão 24h para emergências</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 ZoomZoom Clínica Veterinária. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Formulário de contato específico para esta página
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactPageForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Validação
+                    const inputs = this.querySelectorAll('input[required], select[required], textarea[required]');
+                    let isValid = true;
+                    
+                    inputs.forEach(input => {
+                        if (!input.value.trim()) {
+                            input.classList.add('error');
+                            isValid = false;
+                        } else {
+                            input.classList.remove('error');
+                            input.classList.add('success');
+                        }
+                    });
+                    
+                    if (isValid) {
+                        // Simular envio
+                        const submitBtn = this.querySelector('button[type="submit"]');
+                        const originalText = submitBtn.textContent;
+                        
+                        submitBtn.textContent = 'Enviando...';
+                        submitBtn.disabled = true;
+                        
+                        setTimeout(() => {
+                            // Criar mensagem de sucesso
+                            const successMessage = document.createElement('div');
+                            successMessage.className = 'form-message success';
+                            successMessage.innerHTML = `
+                                <h4>✅ Mensagem Enviada com Sucesso!</h4>
+                                <p>Obrigado pelo seu contato! Retornaremos em até 2 horas úteis.</p>
+                            `;
+                            
+                            this.parentNode.insertBefore(successMessage, this);
+                            this.reset();
+                            
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                            
+                            // Remover mensagem após 5 segundos
+                            setTimeout(() => {
+                                successMessage.remove();
+                            }, 5000);
+                            
+                            // Remover classes de sucesso dos inputs
+                            inputs.forEach(input => input.classList.remove('success'));
+                        }, 2000);
+                    }
+                });
+            }
+
+            // Máscara para telefone
+            const phoneInput = document.getElementById('telefone');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    
+                    if (value.length <= 11) {
+                        if (value.length <= 2) {
+                            value = value.replace(/^(\d{0,2})/, '($1');
+                        } else if (value.length <= 6) {
+                            value = value.replace(/^(\d{2})(\d{0,4})/, '($1) $2');
+                        } else if (value.length <= 10) {
+                            value = value.replace(/^(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+                        } else {
+                            value = value.replace(/^(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+                        }
+                        
+                        e.target.value = value;
+                    }
+                });
+            }
+        });
+    </script>
+    <style>
+        .contact-page {
+            background-color: var(--light);
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+        
+        .contact-methods {
+            margin-bottom: 40px;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .method-icon {
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .method-info h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        
+        .method-info p {
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .map-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        
+        .map-link:hover {
+            text-decoration: underline;
+        }
+        
+        .map-section h3 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-container h2 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        
+        .form-container > p {
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+        
+        .faq-section {
+            margin-top: 80px;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .faq-item h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .faq-item p {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .nav-menu .active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .nav-menu .active:after {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .contact-method {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .method-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
