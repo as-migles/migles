@@ -225,25 +225,94 @@ header {
 
 .about-image {
     flex: 1;
+}
+
+/* Carrossel da clínica */
+.clinic-carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    height: 400px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    gap: 8px;
+    z-index: 10;
 }
 
-.image-placeholder {
-    text-align: center;
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.image-placeholder i {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    opacity: 0.8;
+.dot.active {
+    background: white;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background: white;
+}
+
+.carousel-prev {
+    left: 15px;
+}
+
+.carousel-next {
+    right: 15px;
 }
 
 /* Serviços */
@@ -568,4 +637,24 @@ footer {
 
 .form-message.success .btn:hover {
     background-color: var(--secondary);
+}
+
+/* Responsividade do carrossel */
+@media (max-width: 768px) {
+    .clinic-carousel {
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .clinic-carousel {
+        height: 250px;
+    }
+    
+    .carousel-prev,
+    .carousel-next {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
 }

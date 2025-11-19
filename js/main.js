@@ -211,6 +211,74 @@ function initContactForm() {
     }
 }
 
+// Carrossel automático
+function initCarousel() {
+    const carousel = document.querySelector('.clinic-carousel');
+    if (!carousel) return;
+
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.dot');
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(n) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        currentSlide = (n + slides.length) % slides.length;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    function startAutoSlide() {
+        slideInterval = setInterval(nextSlide, 3000); // 3 SEGUNDOS
+    }
+
+    function stopAutoSlide() {
+        clearInterval(slideInterval);
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+    });
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            stopAutoSlide();
+            showSlide(parseInt(dot.getAttribute('data-slide')));
+            startAutoSlide();
+        });
+    });
+
+    // Pausa o carrossel quando o mouse está em cima
+    carousel.addEventListener('mouseenter', stopAutoSlide);
+    carousel.addEventListener('mouseleave', startAutoSlide);
+
+    // Inicia o carrossel
+    startAutoSlide();
+}
+
 // Inicialização quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', function() {
     renderServices();
@@ -219,6 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initScrollReveal();
     initContactForm();
+    initCarousel();
     
     // Configurar data mínima no formulário (hoje)
     const dateInput = document.getElementById('data');
